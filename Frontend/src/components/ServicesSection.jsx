@@ -82,12 +82,12 @@ const ServicesSection = () => {
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-radial from-orange-500/10 to-transparent rounded-full blur-3xl"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative z-10 max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-8xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-12 py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28">
           {/* Header */}
-          <div className="flex justify-between items-start mb-12">
-            <div>
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20 2xl:mb-24 gap-4 sm:gap-6">
+            <div className="flex-1">
               <h2 
-                className="text-3xl lg:text-4xl font-bold mb-6"
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 xl:mb-8 2xl:mb-10"
                 style={{
                   fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                   lineHeight: '1.1',
@@ -118,7 +118,7 @@ const ServicesSection = () => {
                 </span>
               </h2>
               <p 
-                className="text-lg text-gray-300"
+                className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-gray-300"
                 style={{
                   fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                   lineHeight: '1.4',
@@ -127,8 +127,23 @@ const ServicesSection = () => {
                 Folium AI offers a range of expert services to help your business grow and stay ahead.
               </p>
             </div>
+            
+            {/* See All Services Button - Responsive */}
             <button 
-              className="text-white font-semibold px-8 py-2 rounded-full transition-all duration-300 transform hover:scale-105 relative overflow-hidden group"
+              className="text-white font-semibold 
+                         px-4 py-2 text-xs rounded-lg
+                         xs:px-5 xs:py-2.5 xs:text-xs xs:rounded-xl
+                         sm:px-6 sm:py-3 sm:text-sm sm:rounded-2xl
+                         md:px-7 md:py-3 md:text-sm md:rounded-2xl
+                         lg:px-8 lg:py-3.5 lg:text-base lg:rounded-3xl
+                         xl:px-10 xl:py-4 xl:text-lg xl:rounded-3xl
+                         2xl:px-12 2xl:py-4.5 2xl:text-xl 2xl:rounded-full
+                         min-w-[100px] sm:min-w-[120px] md:min-w-[140px] lg:min-w-[160px] xl:min-w-[180px] 2xl:min-w-[200px]
+                         transition-all duration-300 transform 
+                         hover:scale-105 hover:shadow-lg 
+                         active:scale-95 active:shadow-md
+                         focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:ring-offset-2 focus:ring-offset-black
+                         relative overflow-hidden group"
               style={{
                 fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                 background: 'linear-gradient(145deg, #ff7a47, #e55a2b, #dc2626)',
@@ -142,22 +157,40 @@ const ServicesSection = () => {
                 textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'linear-gradient(145deg, #e55a2b, #dc2626, #b91c1c)';
+                e.currentTarget.style.background = 'linear-gradient(145deg, #ff8a57, #ff7a47, #e55a2b)';
+                e.currentTarget.style.boxShadow = `
+                  inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.3),
+                  0 8px 16px rgba(0, 0, 0, 0.4),
+                  0 4px 8px rgba(220, 38, 38, 0.2)
+                `;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'linear-gradient(145deg, #ff7a47, #e55a2b, #dc2626)';
+                e.currentTarget.style.boxShadow = `
+                  inset 0 1px 0 rgba(255, 255, 255, 0.15),
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.2),
+                  0 4px 8px rgba(0, 0, 0, 0.3),
+                  0 2px 4px rgba(220, 38, 38, 0.15)
+                `;
               }}
             >
-              <span className="relative z-10">See All Services</span>
+              <span className="relative z-10 whitespace-nowrap">See All Services</span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/3 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12"></div>
+              
+              {/* Loading animation effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-400/20 to-transparent opacity-0 rounded-full transform translate-x-[-100%] group-active:opacity-100 group-active:translate-x-[100%] transition-all duration-300"></div>
             </button>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 2xl:gap-20">
             {/* Left Side - Service Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 lg:gap-4 xl:gap-6 2xl:gap-8">
               {services.map((service) => (
                 <div
                   key={service.id}
                   onClick={() => setSelectedService(service.id)}
-                  className={`p-6 rounded-2xl cursor-pointer transition-all duration-300 service-card-hover relative overflow-hidden group ${
+                  className={`p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 2xl:p-8 rounded-lg sm:rounded-xl md:rounded-2xl cursor-pointer transition-all duration-300 service-card-hover relative overflow-hidden group ${
                     selectedService === service.id ? 'selected-card' : ''
                   }`}
                   style={{
@@ -184,22 +217,23 @@ const ServicesSection = () => {
                   }}
                 >
                   {/* Subtle shine effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/1 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12 rounded-2xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/1 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12 rounded-lg sm:rounded-xl md:rounded-2xl"></div>
                   
                   <div className="relative z-10">
-                    <div className="mb-4">
+                    <div className="mb-3 sm:mb-4">
                       {React.cloneElement(service.icon, {
-                        className: 'w-8 h-8',
+                        className: 'w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-12 2xl:h-12',
                         style: {
                           color: selectedService === service.id ? '#ff6b35' : '#888888'
                         }
                       })}
                     </div>
                     <h3 
-                      className="text-lg font-semibold mb-2"
+                      className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold mb-2"
                       style={{
                         fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
-                        color: selectedService === service.id ? '#ffffff' : '#cccccc'
+                        color: selectedService === service.id ? '#ffffff' : '#cccccc',
+                        lineHeight: '1.2'
                       }}
                     >
                       {service.title}
@@ -211,7 +245,7 @@ const ServicesSection = () => {
 
             {/* Right Side - Service Details */}
             <div 
-              className="rounded-2xl p-8 relative overflow-hidden"
+              className="rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 2xl:p-16 relative overflow-hidden"
               style={{
                 backgroundColor: '#1a1a1a',
                 border: '2px solid #333333',
@@ -220,7 +254,7 @@ const ServicesSection = () => {
               }}
             >
               <h3 
-                className="text-3xl font-bold mb-4"
+                className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 xl:mb-8 2xl:mb-10"
                 style={{
                   fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                   lineHeight: '1.1',
@@ -233,7 +267,7 @@ const ServicesSection = () => {
                 {selectedServiceData?.title}
               </h3>
               <p 
-                className="mb-6"
+                className="mb-4 sm:mb-6 md:mb-8 xl:mb-10 2xl:mb-12 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"
                 style={{
                   fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                   lineHeight: '1.4',
@@ -247,12 +281,12 @@ const ServicesSection = () => {
               </p>
 
               {/* Technology Points */}
-              <div className="mb-8">
-                <div className="flex flex-wrap gap-3">
+              <div className="mb-6 sm:mb-8 md:mb-10 xl:mb-12 2xl:mb-16">
+                <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
                   {selectedServiceData?.technologies.map((tech, index) => (
                     <div
                       key={index}
-                      className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200"
+                      className="px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full text-xs sm:text-sm md:text-base font-medium transition-all duration-200"
                       style={{
                         backgroundColor: '#2a2a2a',
                         color: '#ffffff',
@@ -260,7 +294,7 @@ const ServicesSection = () => {
                         fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                         textTransform: 'uppercase',
                         letterSpacing: '0.5px',
-                        fontSize: '12px',
+                        fontSize: window.innerWidth >= 768 ? '12px' : '10px',
                         fontWeight: '600'
                       }}
                     >
@@ -270,9 +304,22 @@ const ServicesSection = () => {
                 </div>
               </div>
 
-              {/* Learn More Button */}
+              {/* Learn More Button - Responsive */}
               <button 
-                className="text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 relative overflow-hidden group"
+                className="text-white font-semibold 
+                           px-4 py-2 text-xs rounded-lg
+                           xs:px-5 xs:py-2.5 xs:text-xs xs:rounded-xl
+                           sm:px-6 sm:py-3 sm:text-sm sm:rounded-2xl
+                           md:px-7 md:py-3 md:text-sm md:rounded-2xl
+                           lg:px-8 lg:py-3.5 lg:text-base lg:rounded-3xl
+                           xl:px-10 xl:py-4 xl:text-lg xl:rounded-3xl
+                           2xl:px-12 2xl:py-4.5 2xl:text-xl 2xl:rounded-full
+                           min-w-[100px] sm:min-w-[110px] md:min-w-[120px] lg:min-w-[140px] xl:min-w-[160px] 2xl:min-w-[180px]
+                           transition-all duration-300 transform 
+                           hover:scale-105 hover:shadow-lg 
+                           active:scale-95 active:shadow-md
+                           focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:ring-offset-2 focus:ring-offset-black
+                           relative overflow-hidden group"
                 style={{
                   fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                   background: 'linear-gradient(145deg, #ff7a47, #e55a2b, #dc2626)',
@@ -286,11 +333,29 @@ const ServicesSection = () => {
                   textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'linear-gradient(145deg, #e55a2b, #dc2626, #b91c1c)';
+                  e.currentTarget.style.background = 'linear-gradient(145deg, #ff8a57, #ff7a47, #e55a2b)';
+                  e.currentTarget.style.boxShadow = `
+                    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                    inset 0 -1px 0 rgba(0, 0, 0, 0.3),
+                    0 8px 16px rgba(0, 0, 0, 0.4),
+                    0 4px 8px rgba(220, 38, 38, 0.2)
+                  `;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(145deg, #ff7a47, #e55a2b, #dc2626)';
+                  e.currentTarget.style.boxShadow = `
+                    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+                    inset 0 -1px 0 rgba(0, 0, 0, 0.2),
+                    0 4px 8px rgba(0, 0, 0, 0.3),
+                    0 2px 4px rgba(220, 38, 38, 0.15)
+                  `;
                 }}
               >
-                <span className="relative z-10">Learn More</span>
+                <span className="relative z-10 whitespace-nowrap">Learn More</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/3 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12"></div>
+                
+                {/* Loading animation effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-400/20 to-transparent opacity-0 rounded-full transform translate-x-[-100%] group-active:opacity-100 group-active:translate-x-[100%] transition-all duration-300"></div>
               </button>
             </div>
           </div>
