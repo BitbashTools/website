@@ -66,7 +66,7 @@ const SuccessStoriesSection = () => {
 
   const DeviceMockup = ({ devices }) => {
     return (
-      <div className="relative h-48 flex items-center justify-center rounded-xl overflow-hidden" style={{
+      <div className="relative h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 2xl:h-56 flex items-center justify-center rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden" style={{
         backgroundColor: '#1a1a1a',
         border: '2px solid #333333',
         background: 'linear-gradient(135deg, #1a1a1a 0%, #222222 100%)',
@@ -103,39 +103,39 @@ const SuccessStoriesSection = () => {
         </div>
 
         {devices.includes("mobile") && (
-          <div className="absolute left-4 top-8 w-16 h-28 rounded-xl shadow-2xl z-20" style={{
+          <div className="absolute left-2 sm:left-3 md:left-4 top-4 sm:top-6 md:top-8 w-10 sm:w-12 md:w-14 lg:w-16 xl:w-18 2xl:w-20 h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32 2xl:h-36 rounded-lg sm:rounded-xl shadow-2xl z-20" style={{
             backgroundColor: '#2a2a2a',
             border: '1px solid #404040'
           }}>
             <div style={{
               backgroundColor: '#333',
-              height: '16px',
+              height: '12px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              borderRadius: '8px 8px 0 0'
+              borderRadius: '6px 6px 0 0'
             }}>
               <div style={{
-                width: '24px',
-                height: '3px',
+                width: '16px',
+                height: '2px',
                 backgroundColor: '#555',
                 borderRadius: '2px'
               }}></div>
             </div>
-            <div className="p-2 space-y-2">
+            <div className="p-1 sm:p-2 space-y-1 sm:space-y-2">
               <div style={{
-                height: '8px',
+                height: '4px',
                 background: 'linear-gradient(135deg, #ff6b35, #dc2626)',
                 borderRadius: '2px'
               }}></div>
               <div style={{
-                height: '8px',
+                height: '4px',
                 background: 'linear-gradient(135deg, #ff8c69, #ffa500)',
                 borderRadius: '2px'
               }}></div>
               <div style={{
                 background: 'linear-gradient(135deg, #ff6b35, #ff8c69, #ffa500)',
-                height: '40px',
+                height: '20px',
                 borderRadius: '4px',
                 opacity: 0.8
               }}></div>
@@ -144,39 +144,39 @@ const SuccessStoriesSection = () => {
         )}
         
         {devices.includes("tablet") && (
-          <div className="absolute left-8 top-4 w-24 h-32 rounded-xl shadow-2xl z-10" style={{
+          <div className="absolute left-4 sm:left-6 md:left-8 top-2 sm:top-3 md:top-4 w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36 h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 2xl:h-40 rounded-lg sm:rounded-xl shadow-2xl z-10" style={{
             backgroundColor: '#2a2a2a',
             border: '1px solid #404040'
           }}>
             <div style={{
               backgroundColor: '#333',
-              height: '16px',
+              height: '12px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              borderRadius: '8px 8px 0 0'
+              borderRadius: '6px 6px 0 0'
             }}>
               <div style={{
-                width: '32px',
-                height: '3px',
+                width: '24px',
+                height: '2px',
                 backgroundColor: '#555',
                 borderRadius: '2px'
               }}></div>
             </div>
-            <div className="p-2 space-y-2">
+            <div className="p-1 sm:p-2 space-y-1 sm:space-y-2">
               <div style={{
-                height: '12px',
+                height: '6px',
                 background: 'linear-gradient(135deg, #666, #888)',
                 borderRadius: '4px'
               }}></div>
               <div className="grid grid-cols-2 gap-1">
                 <div style={{
-                  height: '12px',
+                  height: '6px',
                   background: 'linear-gradient(135deg, #ff6b35, #dc2626)',
                   borderRadius: '2px'
                 }}></div>
                 <div style={{
-                  height: '12px',
+                  height: '6px',
                   background: 'linear-gradient(135deg, #ff8c69, #ffa500)',
                   borderRadius: '2px'
                 }}></div>
@@ -192,37 +192,37 @@ const SuccessStoriesSection = () => {
         )}
 
         {devices.includes("desktop") && (
-          <div className="absolute right-4 top-6 w-32 h-24 rounded-lg shadow-2xl" style={{
+          <div className="absolute right-2 sm:right-3 md:right-4 top-3 sm:top-4 md:top-6 w-20 sm:w-24 md:w-28 lg:w-32 xl:w-36 2xl:w-40 h-12 sm:h-16 md:h-20 lg:h-24 xl:h-28 2xl:h-32 rounded-md sm:rounded-lg shadow-2xl" style={{
             backgroundColor: '#2a2a2a',
             border: '1px solid #404040'
           }}>
             <div style={{
               backgroundColor: '#333',
-              height: '16px',
-              borderRadius: '6px 6px 0 0'
+              height: '12px',
+              borderRadius: '4px 4px 0 0'
             }}>
               <div className="flex items-center space-x-1 px-2 py-1">
                 <div style={{
-                  width: '6px',
-                  height: '6px',
+                  width: '4px',
+                  height: '4px',
                   backgroundColor: '#FF5F57',
                   borderRadius: '50%'
                 }}></div>
                 <div style={{
-                  width: '6px',
-                  height: '6px',
+                  width: '4px',
+                  height: '4px',
                   backgroundColor: '#FFBD2E',
                   borderRadius: '50%'
                 }}></div>
                 <div style={{
-                  width: '6px',
-                  height: '6px',
+                  width: '4px',
+                  height: '4px',
                   backgroundColor: '#28CA42',
                   borderRadius: '50%'
                 }}></div>
               </div>
             </div>
-            <div className="p-2 space-y-1">
+            <div className="p-1 sm:p-2 space-y-1">
               <div style={{
                 background: 'linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 105, 0.1), rgba(255, 165, 0, 0.1))',
                 height: '100%',
@@ -233,18 +233,18 @@ const SuccessStoriesSection = () => {
         )}
 
         {devices.includes("laptop") && (
-          <div className="absolute right-2 top-8 w-28 h-20 rounded-lg shadow-2xl">
+          <div className="absolute right-1 sm:right-2 top-4 sm:top-6 md:top-8 w-18 sm:w-22 md:w-26 lg:w-28 xl:w-32 2xl:w-36 h-12 sm:h-16 md:h-18 lg:h-20 xl:h-24 2xl:h-28 rounded-md sm:rounded-lg shadow-2xl">
             <div style={{
               backgroundColor: '#333',
-              height: '64px',
+              height: '48px',
               borderRadius: '4px 4px 0 0',
-              padding: '8px'
+              padding: '6px'
             }}>
               <div style={{
-                height: '8px',
+                height: '6px',
                 background: 'linear-gradient(135deg, #666, #888)',
                 borderRadius: '2px',
-                marginBottom: '4px'
+                marginBottom: '3px'
               }}></div>
               <div style={{
                 background: 'linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 105, 0.1), rgba(255, 165, 0, 0.1))',
@@ -253,7 +253,7 @@ const SuccessStoriesSection = () => {
               }}></div>
             </div>
             <div style={{
-              height: '4px',
+              height: '3px',
               backgroundColor: '#444',
               borderRadius: '0 0 4px 4px'
             }}></div>
@@ -261,19 +261,19 @@ const SuccessStoriesSection = () => {
         )}
 
         {/* Floating elements */}
-        <div className="absolute top-3 right-6">
+        <div className="absolute top-2 sm:top-3 right-4 sm:right-6">
           <div style={{
-            width: '12px',
-            height: '12px',
+            width: '8px',
+            height: '8px',
             borderRadius: '50%',
             backgroundColor: '#ff6b35',
             boxShadow: '0 0 12px rgba(255, 107, 53, 0.4)'
           }}></div>
         </div>
-        <div className="absolute bottom-4 left-6">
+        <div className="absolute bottom-2 sm:bottom-4 left-4 sm:left-6">
           <div style={{
-            width: '8px',
-            height: '8px',
+            width: '6px',
+            height: '6px',
             borderRadius: '50%',
             backgroundColor: '#ffa500',
             boxShadow: '0 0 8px rgba(255, 165, 0, 0.4)'
@@ -311,12 +311,12 @@ const SuccessStoriesSection = () => {
       
       <section className="relative min-h-screen overflow-hidden" style={{backgroundColor: '#0d0d0d'}}>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative z-10 max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-8xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-12 py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28">
           {/* Header */}
-          <div className="flex justify-between items-start mb-16">
-            <div className="max-w-2xl">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20 2xl:mb-24 gap-4 sm:gap-6">
+            <div className="flex-1 max-w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl">
               <h2 
-                className="text-3xl lg:text-4xl font-bold mb-6"
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 xl:mb-8 2xl:mb-10"
                 style={{
                   fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                   lineHeight: '1.1'
@@ -347,7 +347,7 @@ const SuccessStoriesSection = () => {
                 </span>
               </h2>
               <p 
-                className="text-lg text-gray-300"
+                className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-gray-300"
                 style={{
                   fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                   lineHeight: '1.4'
@@ -359,9 +359,22 @@ const SuccessStoriesSection = () => {
               </p>
             </div>
             
-            {/* Button */}
+            {/* See All Button - Responsive */}
             <button 
-              className="text-white font-semibold px-8 py-2 rounded-full transition-all duration-300 transform hover:scale-105 relative overflow-hidden group"
+              className="text-white font-semibold 
+                         px-4 py-2 text-xs rounded-lg
+                         xs:px-5 xs:py-2.5 xs:text-xs xs:rounded-xl
+                         sm:px-6 sm:py-3 sm:text-sm sm:rounded-2xl
+                         md:px-7 md:py-3 md:text-sm md:rounded-2xl
+                         lg:px-8 lg:py-3.5 lg:text-base lg:rounded-3xl
+                         xl:px-10 xl:py-4 xl:text-lg xl:rounded-3xl
+                         2xl:px-12 2xl:py-4.5 2xl:text-xl 2xl:rounded-full
+                         min-w-[90px] sm:min-w-[100px] md:min-w-[120px] lg:min-w-[140px] xl:min-w-[160px] 2xl:min-w-[180px]
+                         transition-all duration-300 transform 
+                         hover:scale-105 hover:shadow-lg 
+                         active:scale-95 active:shadow-md
+                         focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:ring-offset-2 focus:ring-offset-black
+                         relative overflow-hidden group"
               style={{
                 fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                 background: 'linear-gradient(145deg, #ff7a47, #e55a2b, #dc2626)',
@@ -374,33 +387,54 @@ const SuccessStoriesSection = () => {
                 `,
                 textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
               }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'linear-gradient(145deg, #ff8a57, #ff7a47, #e55a2b)';
+                e.currentTarget.style.boxShadow = `
+                  inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.3),
+                  0 8px 16px rgba(0, 0, 0, 0.4),
+                  0 4px 8px rgba(220, 38, 38, 0.2)
+                `;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'linear-gradient(145deg, #ff7a47, #e55a2b, #dc2626)';
+                e.currentTarget.style.boxShadow = `
+                  inset 0 1px 0 rgba(255, 255, 255, 0.15),
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.2),
+                  0 4px 8px rgba(0, 0, 0, 0.3),
+                  0 2px 4px rgba(220, 38, 38, 0.15)
+                `;
+              }}
             >
-              <span className="flex items-center gap-2 relative z-10">
+              <span className="flex items-center gap-1 sm:gap-2 relative z-10 whitespace-nowrap">
                 See All
-                <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                <span className="group-hover:translate-x-1 transition-transform duration-200 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">→</span>
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/3 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12"></div>
+              
+              {/* Loading animation effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-400/20 to-transparent opacity-0 rounded-full transform translate-x-[-100%] group-active:opacity-100 group-active:translate-x-[100%] transition-all duration-300"></div>
             </button>
           </div>
 
           {/* Project Showcase */}
-          <div className="overflow-hidden py-8">
-            <div className="flex space-x-16 animate-scroll">
+          <div className="overflow-hidden py-4 sm:py-6 md:py-8">
+            <div className="flex space-x-8 sm:space-x-12 md:space-x-16 animate-scroll">
               {/* First set of projects */}
               {projects.map((project) => (
-                <div key={project.id} className="flex-shrink-0 w-96 project-card group cursor-pointer">
+                <div key={project.id} className="flex-shrink-0 w-64 sm:w-80 md:w-96 lg:w-[28rem] xl:w-[32rem] 2xl:w-[36rem] project-card group cursor-pointer">
                   
                   {/* Project Mockup */}
-                  <div className="mb-8">
+                  <div className="mb-4 sm:mb-6 md:mb-8">
                     <DeviceMockup devices={project.devices} />
                   </div>
 
                   {/* Project Info */}
-                  <div className="space-y-4">
+                  <div className="space-y-2 sm:space-y-3 md:space-y-4">
                     {/* Company and Category */}
                     <div className="flex items-start justify-between">
                       <div 
-                        className="text-3xl font-bold whitespace-nowrap"
+                        className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold whitespace-nowrap"
                         style={{
                           fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                           ...getLogoColorStyle(project.logoColor)
@@ -409,7 +443,7 @@ const SuccessStoriesSection = () => {
                         {project.company}
                       </div>
                       <div 
-                        className="text-xs text-gray-400 text-right max-w-32 uppercase tracking-wide"
+                        className="text-xs sm:text-sm md:text-base text-gray-400 text-right max-w-24 sm:max-w-28 md:max-w-32 lg:max-w-36 xl:max-w-40 uppercase tracking-wide"
                         style={{
                           fontFamily: 'Inter, system-ui, -apple-system, sans-serif'
                         }}
@@ -420,7 +454,7 @@ const SuccessStoriesSection = () => {
 
                     {/* Project Title */}
                     <h3 
-                      className="text-xl text-white leading-tight group-hover:text-orange-400 transition-colors duration-300"
+                      className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-white leading-tight group-hover:text-orange-400 transition-colors duration-300"
                       style={{
                         fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                         lineHeight: '1.4'
@@ -430,15 +464,15 @@ const SuccessStoriesSection = () => {
                     </h3>
 
                     {/* Decorative Elements */}
-                    <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-2 sm:gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div 
-                        className="w-12 h-px"
+                        className="w-8 sm:w-10 md:w-12 h-px"
                         style={{
                           background: 'linear-gradient(90deg, #ff6b35, transparent)'
                         }}
                       ></div>
                       <div 
-                        className="w-2 h-2 rounded-full"
+                        className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full"
                         style={{backgroundColor: '#ff6b35'}}
                       ></div>
                     </div>
@@ -448,19 +482,19 @@ const SuccessStoriesSection = () => {
               
               {/* Duplicate set for seamless scroll */}
               {projects.map((project) => (
-                <div key={`dup-${project.id}`} className="flex-shrink-0 w-96 project-card group cursor-pointer">
+                <div key={`dup-${project.id}`} className="flex-shrink-0 w-64 sm:w-80 md:w-96 lg:w-[28rem] xl:w-[32rem] 2xl:w-[36rem] project-card group cursor-pointer">
                   
                   {/* Project Mockup */}
-                  <div className="mb-8">
+                  <div className="mb-4 sm:mb-6 md:mb-8">
                     <DeviceMockup devices={project.devices} />
                   </div>
 
                   {/* Project Info */}  
-                  <div className="space-y-4">
+                  <div className="space-y-2 sm:space-y-3 md:space-y-4">
                     {/* Company and Category */}
                     <div className="flex items-start justify-between">
                       <div 
-                        className="text-3xl font-bold whitespace-nowrap"
+                        className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold whitespace-nowrap"
                         style={{
                           fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                           ...getLogoColorStyle(project.logoColor)
@@ -469,7 +503,7 @@ const SuccessStoriesSection = () => {
                         {project.company}
                       </div>
                       <div 
-                        className="text-xs text-gray-400 text-right max-w-32 uppercase tracking-wide"
+                        className="text-xs sm:text-sm md:text-base text-gray-400 text-right max-w-24 sm:max-w-28 md:max-w-32 lg:max-w-36 xl:max-w-40 uppercase tracking-wide"
                         style={{
                           fontFamily: 'Inter, system-ui, -apple-system, sans-serif'
                         }}
@@ -480,7 +514,7 @@ const SuccessStoriesSection = () => {
 
                     {/* Project Title */}
                     <h3 
-                      className="text-xl text-white leading-tight group-hover:text-orange-400 transition-colors duration-300"
+                      className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-white leading-tight group-hover:text-orange-400 transition-colors duration-300"
                       style={{
                         fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                         lineHeight: '1.4'
@@ -490,15 +524,15 @@ const SuccessStoriesSection = () => {
                     </h3>
 
                     {/* Decorative Elements */}
-                    <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-2 sm:gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div 
-                        className="w-12 h-px"
+                        className="w-8 sm:w-10 md:w-12 h-px"
                         style={{
                           background: 'linear-gradient(90deg, #ff6b35, transparent)'
                         }}
                       ></div>
                       <div 
-                        className="w-2 h-2 rounded-full"
+                        className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full"
                         style={{backgroundColor: '#ff6b35'}}
                       ></div>
                     </div>
