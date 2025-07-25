@@ -36,12 +36,12 @@ const HowWeWorkSection = () => {
 
   return (
     <section className="min-h-screen flex items-center relative" style={{backgroundColor: '#0d0d0d'}}>
-      <div className="relative z-10 max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-[1440px] 2xl:max-w-8xl w-full mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-12 py-12 sm:py-16 md:py-20 lg:py-20 xl:py-24 2xl:py-28">
-        <div className="flex flex-col lg:flex-row lg:items-start gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 2xl:gap-20">
+      <div className="relative z-10 max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-[1440px] 2xl:max-w-8xl w-full mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-12 py-4 sm:py-8 md:py-12 lg:py-20 xl:py-24 2xl:py-28">
+        <div className="flex flex-col lg:flex-row lg:items-start gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16 2xl:gap-20">
           {/* Left Side - Header */}
-          <div className="lg:w-1/3 mb-6 sm:mb-8 md:mb-10 lg:mb-0">
+          <div className="lg:w-1/3 mb-4 sm:mb-6 md:mb-8 lg:mb-0">
             <h2 
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 xl:mb-8 2xl:mb-10"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-2 sm:mb-3 md:mb-4 xl:mb-6 2xl:mb-8"
               style={{
                 fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                 lineHeight: '1.1'

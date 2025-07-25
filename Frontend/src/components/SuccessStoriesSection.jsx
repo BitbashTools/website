@@ -311,9 +311,9 @@ const SuccessStoriesSection = () => {
       
       <section className="relative min-h-screen overflow-hidden" style={{backgroundColor: '#0d0d0d'}}>
         
-        <div className="relative z-10 max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-8xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-12 py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28">
+        <div className="relative z-10 max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-8xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-12 py-4 sm:py-8 md:py-12 lg:py-20 xl:py-24 2xl:py-28">
           {/* Header */}
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20 2xl:mb-24 gap-4 sm:gap-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 sm:mb-6 md:mb-8 lg:mb-16 xl:mb-20 2xl:mb-24 gap-3 sm:gap-4 md:gap-6">
             <div className="flex-1 max-w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl">
               <h2 
                 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 xl:mb-8 2xl:mb-10"
