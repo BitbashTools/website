@@ -36,12 +36,12 @@ const HowWeWorkSection = () => {
 
   return (
     <section className="min-h-screen flex items-center relative" style={{backgroundColor: '#0d0d0d'}}>
-      <div className="relative z-10 max-w-[1440px] w-full mx-auto px-4 sm:px-6 lg:px-12 py-8">
-        <div className="flex flex-col lg:flex-row lg:items-start lg:gap-12">
+      <div className="relative z-10 max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-[1440px] 2xl:max-w-8xl w-full mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-12 py-12 sm:py-16 md:py-20 lg:py-20 xl:py-24 2xl:py-28">
+        <div className="flex flex-col lg:flex-row lg:items-start gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 2xl:gap-20">
           {/* Left Side - Header */}
-          <div className="lg:w-1/3 mb-8 lg:mb-0">
+          <div className="lg:w-1/3 mb-6 sm:mb-8 md:mb-10 lg:mb-0">
             <h2 
-              className="text-3xl lg:text-4xl font-bold mb-6"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 xl:mb-8 2xl:mb-10"
               style={{
                 fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                 lineHeight: '1.1'
@@ -72,7 +72,7 @@ const HowWeWorkSection = () => {
               </span>
             </h2>
             <p 
-              className="text-lg text-gray-300"
+              className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-gray-300"
               style={{
                 fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                 lineHeight: '1.4'
@@ -83,11 +83,11 @@ const HowWeWorkSection = () => {
           </div>
 
           {/* Right Side - Process Steps */}
-          <div className="lg:w-2/3 space-y-2">
+          <div className="lg:w-2/3 space-y-1.5 sm:space-y-2 md:space-y-2.5 lg:space-y-2 xl:space-y-3 2xl:space-y-4">
             {processSteps.map((step, index) => (
               <div key={index} className="group">
                 <div 
-                  className="p-3 lg:p-4 rounded-2xl transition-all duration-300 cursor-pointer relative overflow-hidden"
+                  className="p-2.5 sm:p-3 md:p-4 lg:p-4 xl:p-5 2xl:p-6 rounded-lg sm:rounded-xl md:rounded-2xl transition-all duration-300 cursor-pointer relative overflow-hidden"
                   style={{
                     backgroundColor: '#1a1a1a',
                     background: 'linear-gradient(135deg, #1a1a1a 0%, #222222 100%)',
@@ -103,13 +103,13 @@ const HowWeWorkSection = () => {
                   }}
                 >
                   {/* Subtle shine effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12 rounded-2xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12 rounded-lg sm:rounded-xl md:rounded-2xl"></div>
                   
-                  <div className="flex items-start space-x-6 relative z-10">
+                  <div className="flex items-start space-x-3 sm:space-x-4 md:space-x-5 lg:space-x-6 xl:space-x-7 2xl:space-x-8 relative z-10">
                     {/* Step Number */}
                     <div className="flex-shrink-0">
                       <div 
-                        className="text-4xl lg:text-5xl font-bold transition-all duration-300"
+                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold transition-all duration-300"
                         style={{
                           fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                           color: '#ff6b35',
@@ -121,9 +121,9 @@ const HowWeWorkSection = () => {
                     </div>
 
                     {/* Step Content */}
-                    <div className="pt-1 flex-1">
+                    <div className="pt-0.5 sm:pt-1 md:pt-1.5 lg:pt-1 xl:pt-2 2xl:pt-3 flex-1">
                       <h3 
-                        className="text-lg lg:text-xl font-bold mb-2 text-white group-hover:text-orange-300 transition-colors duration-300"
+                        className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold mb-1 sm:mb-1.5 md:mb-2 xl:mb-3 2xl:mb-4 text-white group-hover:text-orange-300 transition-colors duration-300"
                         style={{
                           fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                           lineHeight: '1.2'
@@ -132,7 +132,7 @@ const HowWeWorkSection = () => {
                         {step.title}
                       </h3>
                       <p 
-                        className="text-base text-gray-300 group-hover:text-gray-200 transition-colors duration-300"
+                        className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-gray-300 group-hover:text-gray-200 transition-colors duration-300"
                         style={{
                           fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
                           lineHeight: '1.4'
